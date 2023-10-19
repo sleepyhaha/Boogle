@@ -19,9 +19,9 @@ const resolvers = {
         throw AuthenticationError;
       }
 
-      const password = await user.isCorrectPassword(password);
+      const correctPassword = await user.isCorrectPassword(password);
 
-      if (!password) {
+      if (!correctPassword) {
         throw AuthenticationError;
       }
 
